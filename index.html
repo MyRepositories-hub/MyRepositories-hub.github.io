@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f2ea">
+  <meta name="description" content="Zhengpeng Xie — reinforcement learning researcher working toward reliable learning with theoretical guarantees.">
+  <title>Zhengpeng Xie — Reliable Learning</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23121428'/><text x='50' y='67' font-size='44' font-family='Arial' font-weight='700' fill='%237079f4' text-anchor='middle'>ZX</text></svg>">
+</head>
+<body id="top">
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+
+  <header class="nav">
+    <div class="shell nav__inner">
+      <a class="brand interactive" href="#top"><strong>Zhengpeng Xie</strong></a>
+      <nav id="navLinks" class="nav__links" aria-label="Primary navigation">
+        <a href="#experience">Experience</a>
+        <a href="#topd">TOP-D</a>
+        <a href="#spo">SPO</a>
+        <a href="#impact">Impact</a>
+        <a href="https://scholar.google.com/citations?user=QuK9uDcAAAAJ&hl=en" target="_blank" rel="noopener">Publications <i>↗</i></a>
+      </nav>
+      <button id="navToggle" class="nav__toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="shell hero__inner">
+        <p class="eyebrow">Reinforcement Learning Researcher</p>
+        <h1>Reliable learning<br><em>with theoretical guarantees.</em></h1>
+        <p class="hero__intro">I develop simple, principled learning objectives for reinforcement learning and the post-training of large foundation models.</p>
+        <div class="hero__actions">
+          <a class="button button--primary interactive" href="#experience">Explore research <span class="button__icon">↓</span></a>
+          <a class="button interactive" href="mailto:zhengpengxie00@gmail.com">Get in touch <span class="button__icon">↗</span></a>
+        </div>
+        <div class="hero__meta">
+          <span>Guangzhou, China</span>
+          <span>Policy optimization · On-policy distillation</span>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#experience" aria-label="Scroll to education and experience"><span>Scroll</span><i></i></a>
+    </section>
+
+    <section class="experience" id="experience">
+      <div class="shell">
+        <div class="experience__head">
+          <div><p class="eyebrow">Education &amp; Experience</p><h2>Learning the theory.<br>Building the systems.</h2></div>
+          <p>My path spans foundational reinforcement learning, large foundation model post-training, and research at HKUST(GZ).</p>
+        </div>
+
+        <div class="experience__list">
+          <article class="experience__item experience__item--featured">
+            <time>2026 — Present</time>
+            <div><span>Education</span><h3>Ph.D. Student</h3><p>The Hong Kong University of Science and Technology (Guangzhou)</p></div>
+            <b>Reinforcement Learning</b>
+          </article>
+          <article class="experience__item">
+            <time>2026</time>
+            <div><span>Research Internship</span><h3>Post-training &amp; On-Policy Distillation</h3><p>LLM Startup</p></div>
+            <b>Foundation Models</b>
+          </article>
+          <article class="experience__item">
+            <time>2026</time>
+            <div><span>Research Team</span><h3>Foundational Reinforcement Learning</h3><p>Hunyuan Qingyun Project</p></div>
+            <b>Reinforcement Learning</b>
+          </article>
+          <article class="experience__item">
+            <time>2024 — 2025</time>
+            <div><span>Research Experience</span><h3>Research Assistant</h3><p>The Hong Kong University of Science and Technology (Guangzhou)</p></div>
+            <b>Research</b>
+          </article>
+          <article class="experience__item">
+            <time>2020 — 2024</time>
+            <div><span>Education</span><h3>Undergraduate Student</h3><p>Chongqing Normal University</p></div>
+            <b>Undergraduate</b>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="research" id="research">
+      <article class="paper paper--reverse shell" id="topd">
+        <a class="paper__page interactive" href="assets/papers/top-d.pdf" target="_blank" aria-label="Open the TOP-D paper PDF">
+          <div class="paper__sheet"><img src="assets/papers/top-d-page-1.png" alt="First page of the Trust Region Policy Distillation paper"></div>
+          <span class="media-action">PDF <i>↗</i></span>
+        </a>
+        <div class="paper__copy">
+          <p class="paper__number">01 / 2026</p>
+          <h2>Trust Region Policy Distillation</h2>
+          <p class="paper__short">TOP-D</p>
+          <p class="paper__lead">Stable on-policy distillation through a dynamically constructed proximal teacher.</p>
+          <p>TOP-D converts the unbounded learning signal of standard OPD into a smooth, lower-bounded signal, with formal convergence and monotonic improvement guarantees.</p>
+          <div class="links"><a class="ui-link interactive" href="https://arxiv.org/abs/2607.04751" target="_blank" rel="noopener"><span>Paper</span><i>↗</i></a></div>
+        </div>
+      </article>
+
+      <article class="paper shell" id="spo">
+        <a class="paper__page interactive" href="assets/papers/spo-openreview.pdf" target="_blank" aria-label="Open the official SPO paper PDF">
+          <div class="paper__sheet"><img src="assets/papers/spo-openreview-page-1.png" alt="First page of the official Simple Policy Optimization paper"></div>
+          <span class="media-action">PDF <i>↗</i></span>
+        </a>
+        <div class="paper__copy">
+          <p class="paper__number">02 / ICML 2025</p>
+          <h2 class="paper__title--single">Simple Policy Optimization</h2>
+          <p class="paper__short">SPO</p>
+          <p class="paper__lead">A first-order policy optimization objective that preserves corrective gradients beyond the trust region.</p>
+          <p>By slightly modifying PPO's policy loss, SPO combines implementation simplicity with stronger theoretical properties and stable optimization for deep policy networks.</p>
+          <div class="links">
+            <a class="ui-link interactive" href="https://openreview.net/forum?id=SG8Yx1FyeU" target="_blank" rel="noopener"><span>OpenReview</span><i>↗</i></a>
+            <a class="ui-link interactive" href="assets/papers/spo-openreview.pdf" target="_blank"><span>Official PDF</span><i>↗</i></a>
+            <a class="ui-link interactive" href="https://github.com/MyRepositories-hub/Simple-Policy-Optimization" target="_blank" rel="noopener"><span>Code</span><i>↗</i></a>
+          </div>
+        </div>
+      </article>
+
+      <section class="robotics" id="impact">
+        <div class="shell">
+          <div class="section-head">
+            <p class="eyebrow">From objective to embodiment</p>
+            <h2>The Impact of SPO</h2>
+            <p>Two independent robotics projects use SPO-style constraints to keep policy updates corrective and stable.</p>
+          </div>
+
+          <div class="adoption-papers">
+            <article class="adoption-paper">
+              <div class="adoption-paper__top"><span>01</span><b>Physical Intelligence · 2025</b></div>
+              <h3>π*0.6: a VLA that Learns from Experience</h3>
+              <p>Physical Intelligence. The technical report implements a DPPO/FPO variant with an alternative PPO constraint following SPO for real-robot reinforcement learning.</p>
+              <div class="adoption-paper__tags"><span>Vision-Language-Action</span><span>Real-robot RL</span><span>SPO constraint</span></div>
+              <a class="ui-link ui-link--on-dark interactive" href="https://www.pi.website/download/pistar06.pdf" target="_blank" rel="noopener"><span>Technical report</span><i>↗</i></a>
+            </article>
+            <article class="adoption-paper">
+              <div class="adoption-paper__top"><span>02</span><b>Amazon FAR · UC Berkeley · 2026</b></div>
+              <h3>Flow Policy Gradients for Robot Control</h3>
+              <p>Brent Yi, Hongsuk Choi, et al. FPO++ uses an asymmetric trust region: PPO for positive advantages and SPO for negative advantages.</p>
+              <div class="adoption-paper__tags"><span>Flow policy</span><span>Sim-to-real</span><span>Humanoid control</span></div>
+              <a class="ui-link ui-link--on-dark interactive" href="https://hongsukchoi.github.io/fpo-control/asset/fpo_control_20260206.pdf" target="_blank" rel="noopener"><span>Paper</span><i>↗</i></a>
+            </article>
+          </div>
+
+          <a class="demo demo--pi interactive" href="https://www.pi.website/blog/pistar06" target="_blank" rel="noopener">
+            <div class="demo__media"><video autoplay muted loop playsinline preload="metadata" aria-label="Official π*0.6 robot box assembly demo"><source src="assets/media/pi-star-06-feature.mp4" type="video/mp4"></video></div>
+            <div class="demo__overlay"><span>Physical Intelligence · π*0.6</span><h3>Learning from real-world experience</h3><i>↗</i></div>
+          </a>
+
+          <div class="fpo-label"><span>FPO++ · Official Sim-to-Real demos</span><b>Three physical humanoid behaviors</b></div>
+          <div class="demo-row demo-row--portrait">
+            <a class="demo demo--portrait interactive" href="https://hongsukchoi.github.io/fpo-control/" target="_blank" rel="noopener">
+              <div class="demo__media"><video autoplay muted loop playsinline preload="metadata" aria-label="The first official FPO++ Sim-to-Real humanoid flip demo"><source src="assets/media/fpo-plusplus-flip.mp4" type="video/mp4"></video></div>
+              <div class="demo__overlay"><span>Sim-to-Real #01</span><h3>Humanoid flip</h3><i>↗</i></div>
+            </a>
+            <a class="demo demo--portrait interactive" href="https://hongsukchoi.github.io/fpo-control/" target="_blank" rel="noopener">
+              <div class="demo__media"><video autoplay muted loop playsinline preload="metadata" aria-label="Official FPO++ humanoid dynamic tracking demo"><source src="assets/media/fpo-plusplus-dance.mp4" type="video/mp4"></video></div>
+              <div class="demo__overlay"><span>Sim-to-Real #02</span><h3>Dynamic tracking</h3><i>↗</i></div>
+            </a>
+            <a class="demo demo--portrait interactive" href="https://hongsukchoi.github.io/fpo-control/" target="_blank" rel="noopener">
+              <div class="demo__media"><video autoplay muted loop playsinline preload="metadata" aria-label="Official FPO++ Sim-to-Real humanoid running demo"><source src="assets/media/fpo-plusplus-run.mp4" type="video/mp4"></video></div>
+              <div class="demo__overlay"><span>Sim-to-Real</span><h3>Humanoid run</h3><i>↗</i></div>
+            </a>
+          </div>
+          <p class="source-note">Full-length official demos. Click any video to open its original project page.</p>
+        </div>
+      </section>
+    </section>
+
+    <section class="contact">
+      <div class="shell contact__inner contact__inner--no-avatar">
+        <div><p class="eyebrow">Zhengpeng Xie</p><h2>Building the foundations for a future of reliable, self-improving intelligence.</h2></div>
+        <div class="contact__links">
+          <a class="interactive" href="mailto:zhengpengxie00@gmail.com">Email <span>↗</span></a>
+          <a class="interactive" href="https://scholar.google.com/citations?user=QuK9uDcAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar <span>↗</span></a>
+          <a class="interactive" href="https://github.com/MyRepositories-hub" target="_blank" rel="noopener">GitHub <span>↗</span></a>
+          <a class="interactive" href="https://scholar.google.com/citations?user=QuK9uDcAAAAJ&hl=en" target="_blank" rel="noopener">Publications <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="shell"><span>© 2026 Zhengpeng Xie</span><span class="footer__quote">What I cannot create, I do not understand.</span><a href="#top">Back to top ↑</a></div></footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
