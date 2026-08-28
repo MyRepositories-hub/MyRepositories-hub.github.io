@@ -28,7 +28,6 @@ Open `http://localhost:8000`.
 - `assets/js/main.js` — desktop inertial wheel scrolling, eased anchors, scroll progress, paper parallax, mobile navigation, reveals, and viewport-aware video playback
 - `assets/papers/` — source PDFs and rendered first-page images for SPO and TOP-D
 - `assets/media/` — locally hosted official robotics demos
-- `assets/cv.pdf` — current CV
 
 ## Verified sources
 
@@ -39,13 +38,13 @@ Open `http://localhost:8000`.
 
 The π*0.6 technical report states that its DPPO/FPO variant uses an alternative PPO constraint following SPO. The FPO++ project page states that it adopts the SPO objective for negative-advantage actions.
 
-## Permanent deployment with GitHub Pages
+## Deployment
 
-1. Sign in to the `MyRepositories-hub` GitHub account.
-2. Create a public repository named exactly `MyRepositories-hub.github.io`.
-3. Upload `index.html`, `README.md`, and the complete `assets/` directory to the repository root. Upload the extracted files, not the ZIP itself.
-4. In the repository, open **Settings → Pages** and choose **Deploy from a branch**, branch `main`, folder `/ (root)`.
-5. The permanent site URL will be `https://myrepositories-hub.github.io/`.
-6. For a more personal address, connect a custom domain in **Settings → Pages → Custom domain** after purchasing the domain.
+The site is deployed from the `main` branch of `MyRepositories-hub/MyRepositories-hub.github.io` with GitHub Pages.
 
-The repository and Pages site were not publicly available when last checked on August 28, 2026, so the repository still needs to be created or made public before deployment.
+- Live site: `https://myrepositories-hub.github.io/`
+- Repository: `https://github.com/MyRepositories-hub/MyRepositories-hub.github.io`
+- Pages source: `main` branch, repository root
+- HTTPS: enforced
+
+Future updates only require committing and pushing changed website files to `main`; GitHub Pages rebuilds automatically.
