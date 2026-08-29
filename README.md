@@ -7,9 +7,10 @@ A deliberately minimal, zero-build academic homepage focused on two representati
 1. Vision: “Reliable learning with theoretical guarantees.”
 2. Education & Experience: HKUST(GZ) PhD from 2026, prior research roles, and undergraduate education
 3. Trust Region Policy Distillation (TOP-D), with the rendered first page of the paper
-4. Simple Policy Optimization (SPO), with the rendered first page of the official ICML/OpenReview camera-ready paper
-5. The Impact of SPO: π*0.6 paper information and a wide official demo, followed by three portrait FPO++ Sim-to-Real demos
-6. Compact contact section with the ambition “Building the foundations for a future of reliable, self-improving intelligence,” plus a clickable global visitor map.
+4. The Next Impact of TOP-D: an open invitation for collaboration across distillation, trustworthy post-training, and embodied intelligence
+5. Simple Policy Optimization (SPO), with the rendered first page of the official ICML/OpenReview camera-ready paper
+6. The Impact of SPO: π*0.6 paper information and a wide official demo, followed by three portrait FPO++ Sim-to-Real demos
+7. Compact contact section with the ambition “Building the foundations for a future of reliable, self-improving intelligence,” plus a clickable global visitor map.
 
 The site uses the selected classic cobalt palette as its fixed visual identity. Desktop mouse/trackpad scrolling uses a restrained inertial interpolation inspired by media-led research pages; touch devices and reduced-motion users retain native scrolling.
 
