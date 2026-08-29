@@ -113,13 +113,63 @@
   if (reducedMotion.matches) {
     videos.forEach((video) => video.pause());
   } else {
+    const videoState = new WeakMap(videos.map((video) => [video, { visible: false, ready: false, promise: null }]));
+    let fetchQueue = Promise.resolve();
+
+    const loadVideo = (video) => {
+      const state = videoState.get(video);
+      if (state.promise) return state.promise;
+
+      const task = fetchQueue.then(async () => {
+        const response = await fetch(video.dataset.src, { cache: "force-cache" });
+        if (!response.ok) throw new Error(`Video request failed: ${response.status}`);
+        const objectUrl = URL.createObjectURL(await response.blob());
+
+        await new Promise((resolve, reject) => {
+          const done = () => { cleanup(); resolve(); };
+          const fail = () => { cleanup(); reject(new Error("Video decode failed")); };
+          const cleanup = () => {
+            video.removeEventListener("loadeddata", done);
+            video.removeEventListener("error", fail);
+          };
+          video.addEventListener("loadeddata", done, { once: true });
+          video.addEventListener("error", fail, { once: true });
+          video.src = objectUrl;
+          video.load();
+        });
+
+        state.ready = true;
+        if (state.visible) video.play().catch(() => {});
+      });
+
+      state.promise = task;
+      fetchQueue = task.catch(() => {});
+      return task;
+    };
+
+    const preloadObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        loadVideo(entry.target).catch(() => {});
+        preloadObserver.unobserve(entry.target);
+      });
+    }, { rootMargin: "900px 0px", threshold: 0 });
+
     const videoObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) entry.target.play().catch(() => {});
-        else entry.target.pause();
+        const video = entry.target;
+        const state = videoState.get(video);
+        state.visible = entry.isIntersecting;
+        if (entry.isIntersecting) loadVideo(video).catch(() => {});
+        else video.pause();
+        if (entry.isIntersecting && state.ready) video.play().catch(() => {});
       });
-    }, { rootMargin: "40px 0px", threshold: 0.2 });
-    videos.forEach((video) => videoObserver.observe(video));
+    }, { rootMargin: "20px 0px", threshold: 0.2 });
+
+    videos.forEach((video) => {
+      preloadObserver.observe(video);
+      videoObserver.observe(video);
+    });
 
     const revealTargets = $$(".experience__head > *, .experience__item, .paper__page, .paper__copy, .topd-impact h2, .topd-impact__invite > *, .section-head, .adoption-paper, .demo, .fpo-label, .contact__inner > *");
     revealTargets.forEach((element, index) => {
