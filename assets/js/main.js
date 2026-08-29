@@ -128,9 +128,7 @@
     });
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-in");
-        revealObserver.unobserve(entry.target);
+        entry.target.classList.toggle("is-in", entry.isIntersecting);
       });
     }, { threshold: 0.06, rootMargin: "0px 0px -4%" });
     revealTargets.forEach((element) => revealObserver.observe(element));
