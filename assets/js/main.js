@@ -23,7 +23,7 @@
 
   const progress = $("#scrollProgress");
   const hero = $(".hero");
-  const paperSheets = $$(".paper__backdrop");
+  const paperSheets = $$(".paper__sheet");
   let effectsQueued = false;
 
   function updateScrollEffects() {
@@ -121,7 +121,7 @@
     }, { rootMargin: "40px 0px", threshold: 0.2 });
     videos.forEach((video) => videoObserver.observe(video));
 
-    const revealTargets = $$(".experience__head > *, .experience__item, .paper__copy, .section-head, .adoption-paper, .demo, .fpo-label, .contact__inner > *");
+    const revealTargets = $$(".experience__head > *, .experience__item, .paper__page, .paper__copy, .section-head, .adoption-paper, .demo, .fpo-label, .contact__inner > *");
     revealTargets.forEach((element, index) => {
       element.classList.add("reveal");
       element.style.transitionDelay = `${Math.min(index % 3, 2) * 70}ms`;
