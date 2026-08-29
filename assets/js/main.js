@@ -118,7 +118,7 @@
         if (entry.isIntersecting) entry.target.play().catch(() => {});
         else entry.target.pause();
       });
-    }, { rootMargin: "180px 0px", threshold: 0.08 });
+    }, { rootMargin: "40px 0px", threshold: 0.2 });
     videos.forEach((video) => videoObserver.observe(video));
 
     const revealTargets = $$(".experience__head > *, .experience__item, .paper__page, .paper__copy, .section-head, .adoption-paper, .demo, .fpo-label, .contact__inner > *");
