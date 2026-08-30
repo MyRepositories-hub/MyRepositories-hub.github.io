@@ -27,7 +27,7 @@ Open `http://localhost:8000`.
 - `index.html` — page content
 - `assets/css/style.css` — responsive visual system using a personal cobalt/indigo accent
 - `assets/js/main.js` — desktop inertial wheel scrolling, eased anchors, scroll progress, paper parallax, mobile navigation, reveals, and viewport-aware video playback
-- `assets/papers/` — source PDFs and rendered first-page images for SPO and TOP-D
+- `assets/papers/` — source PDFs plus lazy-loaded 1020/2040px responsive WebP first-page previews for SPO and TOP-D, with PNG fallbacks
 - `assets/media/` — locally hosted official robotics demos
 
 ## Verified sources

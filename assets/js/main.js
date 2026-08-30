@@ -34,7 +34,7 @@
     paperSheets.forEach((sheet) => {
       const bounds = sheet.parentElement.getBoundingClientRect();
       const centerOffset = bounds.top + bounds.height / 2 - window.innerHeight / 2;
-      const shift = Math.max(-22, Math.min(22, centerOffset * -0.028));
+      const shift = Math.round(Math.max(-22, Math.min(22, centerOffset * -0.028)));
       sheet.style.setProperty("--paper-shift", `${shift}px`);
     });
     effectsQueued = false;
