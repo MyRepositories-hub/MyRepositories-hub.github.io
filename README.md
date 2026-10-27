@@ -27,13 +27,13 @@ Open `http://localhost:8000`.
 - `index.html` — page content
 - `assets/css/style.css` — responsive visual system using a personal cobalt/indigo accent
 - `assets/js/main.js` — desktop inertial wheel scrolling, eased anchors, scroll progress, paper parallax, mobile navigation, reveals, and viewport-aware video playback
-- `assets/papers/` — source PDFs plus lazy-loaded 1020/2040px responsive WebP first-page previews for SPO and TOP-D, with PNG fallbacks
+- `assets/papers/` — source PDFs plus lazy-loaded, optimized vector SVG first-page previews for SPO and TOP-D; TOP-D uses the updated manuscript supplied on October 27, 2026
 - `assets/media/` — locally hosted official robotics demos
 
 ## Verified sources
 
 - SPO: `https://arxiv.org/abs/2401.16025`
-- TOP-D: `https://arxiv.org/abs/2607.04751`
+- TOP-D updated manuscript: `assets/papers/top-d.pdf?v=20261027` (author-supplied PDF); code: `https://github.com/xie-lab-ml/TOP-D`
 - π*0.6: `https://www.pi.website/blog/pistar06`
 - FPO++: `https://hongsukchoi.github.io/fpo-control/`
 

@@ -8,18 +8,22 @@ const PUBLICATIONS = [
       { n: "Zhengpeng Xie", me: true }, { n: "Li Lyna Zhang" },
       { n: "Zeke Xie" }, { n: "Mao Yang" }
     ],
-    venue: "arXiv preprint arXiv:2607.04751",
+    venue: "Manuscript (updated October 2026)",
     year: 2026,
     type: "preprint",
     first: true,
     highlight: true,
     tags: ["Featured", "TOP-D"],
-    links: [{ label: "arXiv", url: "https://arxiv.org/abs/2607.04751" }],
-    bibtex: `@article{xie2026trust,
-  title   = {Trust Region Policy Distillation},
-  author  = {Xie, Zhengpeng and Zhang, Li Lyna and Xie, Zeke and Yang, Mao},
-  journal = {arXiv preprint arXiv:2607.04751},
-  year    = {2026}
+    links: [
+      { label: "Paper", url: "assets/papers/top-d.pdf?v=20261027" },
+      { label: "Code", url: "https://github.com/xie-lab-ml/TOP-D" }
+    ],
+    bibtex: `@misc{xie2026trust,
+  title  = {Trust Region Policy Distillation},
+  author = {Xie, Zhengpeng and Zhang, Li Lyna and Xie, Zeke and Yang, Mao},
+  year   = {2026},
+  note   = {Updated manuscript, October 2026},
+  url    = {https://myrepositories-hub.github.io/assets/papers/top-d.pdf?v=20261027}
 }`
   },
   {
