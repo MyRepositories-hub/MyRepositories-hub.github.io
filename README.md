@@ -27,7 +27,7 @@ Open `http://localhost:8000`.
 - `index.html` — page content
 - `assets/css/style.css` — responsive visual system using a personal cobalt/indigo accent
 - `assets/js/main.js` — desktop inertial wheel scrolling, eased anchors, scroll progress, paper parallax, mobile navigation, reveals, and viewport-aware video playback
-- `assets/papers/` — source PDFs plus lazy-loaded, optimized vector SVG first-page previews for SPO and TOP-D; TOP-D uses the updated manuscript supplied on October 27, 2026
+- `assets/papers/` — source PDFs plus compact vector SVG first-page previews for SPO and TOP-D. Both previews are discovered early with low-priority image preload and decoded asynchronously, rather than waiting for a scroll before downloading; glyph paths are deduplicated without rasterizing the pages. TOP-D uses the updated manuscript supplied on October 27, 2026.
 - `assets/media/` — locally hosted official robotics demos
 
 ## Verified sources
